@@ -13,12 +13,14 @@ FROM golang:alpine AS buildBackend
 RUN apk --no-cache add build-base git mercurial gcc
 RUN go get github.com/gin-gonic/gin
 RUN go get github.com/gin-contrib/static
+ENV PORT 8080
 COPY server.go /src/server.go
 RUN cd /src && go build -o goapp
 
 # final stage
 FROM alpine
-EXPOSE 9000
+ENV port 8080
+EXPOSE ${port}
 WORKDIR /app
 COPY --from=buildBackend /src/goapp /app/
 COPY --from=buildFrontend /src/dist /app/build/
