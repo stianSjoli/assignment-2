@@ -10,6 +10,6 @@ steps:
     entrypoint: npm
     args: ['run', 'build']
   - name: 'gcr.io/cloud-builders/docker'
-    args: [ 'build', '-t', 'gcr.io/gcp-learning-292523/passwordQuality', '.' ]
+    args: [ 'build', '-t', 'gcr.io/gcp-learning-292523/passwordquality', '.' ]
   - name: 'gcr.io/cloud-builders/docker'
-    args: [ 'push', 'gcr.io/gcp-learning-292523/passwordQuality']
+    args: [ 'push', 'gcr.io/gcp-learning-292523/passwordquality']
