@@ -1,4 +1,4 @@
-#This is the implementation of assignment 2: User authentication 
+#This is the implementation of assignment 2: User authentication for Introduction to Cyber and Information Security Technology (IMT4113)
 
 ## How to run the code 
 
